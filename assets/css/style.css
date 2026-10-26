@@ -328,11 +328,6 @@ a{ color:inherit; }
 }
 .about__body p{ color:var(--muted); max-width:62ch; }
 .about__body strong{ color:var(--text); }
-.about__seeking{
-  margin-top:1.8rem; padding:1.05rem 1.3rem;
-  border-left:2px solid var(--accent); background:var(--bg-2);
-  border-radius:0 var(--radius) var(--radius) 0; color:var(--text) !important;
-}
 .about__side{ display:grid; gap:1rem; }
 .card{ border:1px solid var(--line); background:var(--bg-2); border-radius:var(--radius); padding:1.3rem 1.4rem; }
 .card h3{
