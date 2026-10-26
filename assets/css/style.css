@@ -566,3 +566,10 @@ body.lb-open{ overflow:hidden; }
   padding-top:1rem; border-top:1px solid var(--line);
   font-size:.86rem !important; color:var(--faint) !important;
 }
+
+/* ───────────── Card: single-fact lines (Education) ───────────── */
+.card__line{
+  margin:0 0 .2rem; color:var(--text);
+  font-family:var(--serif); font-size:1.02rem; font-weight:600; line-height:1.3;
+}
+.card__sub{ margin:0; color:var(--muted); font-size:.86rem; }
