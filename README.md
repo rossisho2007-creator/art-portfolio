@@ -3,7 +3,7 @@
 Character design, concept art and game art. Built as a static site so it can be hosted
 free on GitHub Pages and linked directly from internship applications.
 
-**Live site:** https://PLACEHOLDER.github.io/art-portfolio/
+**Live site:** https://rossisho2007-creator.github.io/art-portfolio/
 
 ---
 
