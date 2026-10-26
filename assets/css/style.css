@@ -444,3 +444,144 @@ body.lb-open{ overflow:hidden; }
 
   .site-footer{ flex-direction:column; align-items:flex-start; }
 }
+
+/* ============================================================
+   Social buttons, albums, slideshow — added in revision 2
+   ============================================================ */
+
+/* ───────────── Icon buttons & nav socials ───────────── */
+.btn--icon{
+  display:inline-flex; align-items:center; gap:.5rem;
+}
+.btn--icon svg{ flex:none; }
+
+.nav__social{
+  display:flex; align-items:center; gap:.3rem;
+  margin-left:.4rem; padding-left:1.1rem;
+  border-left:1px solid var(--line);
+}
+.nav__social a{
+  display:grid; place-items:center;
+  width:32px; height:32px; border-radius:50%;
+  color:var(--muted); transition:.22s var(--ease);
+}
+.nav__social a::after{ display:none; }
+.nav__social a:hover{ color:var(--accent); background:rgba(95,212,214,.1); }
+
+/* ───────────── Sub-headings inside a group ───────────── */
+.subhead{
+  display:flex; align-items:baseline; gap:.9rem; flex-wrap:wrap;
+  margin:0 0 1.1rem;
+}
+.subhead:not(:first-of-type){ margin-top:2.8rem; }
+.subhead h4{
+  font-family:var(--serif); font-size:1.05rem; font-weight:600;
+  margin:0; letter-spacing:-.005em;
+}
+.subhead p{ margin:0; font-size:.85rem; color:var(--faint); }
+
+/* ───────────── Callout (the recognition note) ───────────── */
+.callout{
+  margin:1.2rem 0 1rem; padding:.95rem 1.2rem;
+  background:linear-gradient(100deg, rgba(95,212,214,.1), rgba(255,77,141,.07));
+  border:1px solid rgba(95,212,214,.26);
+  border-radius:10px; color:var(--text); font-size:.93rem;
+}
+.callout strong{ color:var(--accent); }
+
+.group__note{
+  font-size:.78rem; color:var(--faint); margin:.8rem 0 0; max-width:62ch;
+}
+
+/* ───────────── Album tiles ───────────── */
+.grid--albums{
+  grid-template-columns:repeat(auto-fill,minmax(288px,1fr));
+  margin-bottom:.5rem;
+}
+
+.tile--album{ cursor:pointer; overflow:visible; background:transparent; border:0; }
+.tile--album .tile__body{
+  border:1px solid var(--line); border-top:0;
+  border-radius:0 0 var(--radius) var(--radius);
+  background:var(--bg-2);
+}
+
+.tile__stack{ position:relative; }
+.tile--album .tile__media{
+  position:relative; z-index:3; aspect-ratio:4/5;
+  border:1px solid var(--line); border-bottom:0;
+  border-radius:var(--radius) var(--radius) 0 0; overflow:hidden;
+}
+.tile__peek{
+  position:absolute; inset:0; z-index:1;
+  border-radius:var(--radius); border:1px solid var(--line);
+  background-size:cover; background-position:center;
+  filter:brightness(.5);
+  transition:transform .4s var(--ease);
+}
+.tile__peek--1{ z-index:2; transform:translate(7px,7px) rotate(1.4deg); }
+.tile__peek--2{ z-index:1; transform:translate(14px,14px) rotate(2.8deg); }
+.tile--album:hover .tile__peek--1{ transform:translate(12px,10px) rotate(2.4deg); }
+.tile--album:hover .tile__peek--2{ transform:translate(23px,19px) rotate(4.6deg); }
+
+.tile__count{
+  position:absolute; left:.7rem; bottom:.7rem; z-index:4;
+  font-size:.7rem; font-weight:600; letter-spacing:.06em;
+  padding:.3rem .65rem; border-radius:999px;
+  background:rgba(10,11,17,.82); backdrop-filter:blur(6px);
+  border:1px solid var(--line); color:var(--text);
+}
+
+/* ───────────── Link list (About › Find me) ───────────── */
+.linklist{ list-style:none; margin:0; padding:0; display:grid; gap:.3rem; }
+.linklist a{
+  display:flex; align-items:center; gap:.65rem;
+  padding:.5rem .6rem; margin:0 -.6rem; border-radius:8px;
+  text-decoration:none; font-size:.88rem; color:var(--muted);
+  transition:.2s var(--ease);
+}
+.linklist a:hover{ color:var(--accent); background:var(--bg-3); }
+.linklist svg{ flex:none; }
+
+/* ───────────── Lightbox: album mode ───────────── */
+.lightbox__stage{
+  display:grid; place-items:center;
+  min-width:0; overflow:hidden;
+}
+.lightbox__album{
+  font-size:.7rem; font-weight:600; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--accent); margin:0 0 .5rem;
+}
+
+.lightbox__img.slide-l{ animation:slideL .32s var(--ease); }
+.lightbox__img.slide-r{ animation:slideR .32s var(--ease); }
+@keyframes slideL{ from{ opacity:0; transform:translateX(34px); } to{ opacity:1; transform:none; } }
+@keyframes slideR{ from{ opacity:0; transform:translateX(-34px); } to{ opacity:1; transform:none; } }
+
+.lightbox__dots{
+  display:flex; gap:.4rem; flex-wrap:wrap; margin:0 0 1rem;
+}
+.dot{
+  width:9px; height:9px; padding:0; border-radius:50%; cursor:pointer;
+  background:var(--line); border:1px solid transparent;
+  transition:.2s var(--ease);
+}
+.dot:hover{ background:var(--faint); }
+.dot.is-on{ background:var(--accent); transform:scale(1.25); }
+
+/* Album slides are consistent in size, so pin the stage height to stop jumping. */
+.lightbox.is-album .lightbox__img{ max-height:min(72vh,760px); }
+
+/* ───────────── Contact actions wrap ───────────── */
+.contact__actions{ flex-wrap:wrap; gap:.75rem; }
+
+@media (max-width:720px){
+  .nav__social{
+    border-left:0; border-top:1px solid var(--line);
+    margin:0; padding:.9rem 0 0; gap:.6rem;
+  }
+  .grid--albums{ grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); }
+  .tile__peek--2{ display:none; }
+  .subhead{ gap:.3rem; }
+  .subhead p{ flex-basis:100%; }
+}

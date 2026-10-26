@@ -11,13 +11,15 @@ free on GitHub Pages and linked directly from internship applications.
 
 | Section | Pieces | What it shows |
 |---|---|---|
-| **Fish Game** | 15 | Ongoing original narrative game — cast design, expression sprite sets, key art, HUD mockup, title treatment |
-| **Creature & Environment** | 3 | Fully rendered creature design staged in painted environments |
+| **Fish Game** | 15 | Ongoing original narrative game — cast design, two expression sprite sets (shown as albums), key art, HUD mockup, title treatment |
+| **Fan Art — My Singing Monsters** | 3 | Rendered fan art; three pieces officially reposted by Big Blue Bubble |
 | **Illustration & Character Concepts** | 8 | Personal narrative illustration and original character work |
 | **Commissioned & Product** | 2 | Paid merch design drawn to a client brief and real print constraints |
 
-Signed under two handles, both mine: **Sottonos** (illustration, character work) and
-**@Fishettoob** (creature, environment work).
+Published as **Sottonos** — [instagram.com/sottonos](https://www.instagram.com/sottonos).
+
+Fan art pieces were originally posted under an older handle (`@Fishettoob`) which is no
+longer in active use; the signature is still visible in those images.
 
 ### A note on Fish Game
 
@@ -30,6 +32,8 @@ unreleased.
 ## Features
 
 - Filterable gallery by discipline
+- Album tiles: near-identical sets (sprite expression sheets) collapse into one card and
+  open as a slideshow with dot navigation
 - Lightbox viewer with keyboard (`←` `→` `Esc`), swipe and focus trapping
 - Lazy-loaded thumbnails with full-resolution images on open
 - Responsive down to small phones
@@ -62,8 +66,13 @@ Artwork is driven by a single generated manifest, so you never hand-edit the gal
     "illustration",                       # fish-game | creatures | illustration | commissions
     "Piece Title",                        # shown on the tile and in the lightbox
     "One or two sentences on what the piece solves.",
-    ["illustration", "painting"]),        # filter tags
+    ["illustration", "painting"],         # filter tags
+    None),                                # album id, or None for a standalone piece
    ```
+
+   To add a piece to an **album** (a set that collapses into one clickable slideshow card),
+   pass an album id as the last field and make sure that id exists in the `ALBUMS` dict at
+   the top of the same file.
 
 2. Run it:
 

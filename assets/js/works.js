@@ -1,4 +1,30 @@
-// Auto-generated gallery manifest. Edit tools/build_assets.py and re-run to regenerate.
+// Auto-generated gallery manifest.
+// Edit tools/build_assets.py and re-run it, then run tools/make_manifest.py.
+const ALBUMS = {
+  "angri-expressions": {
+    "section": "fish-game",
+    "title": "Ang-ri - Expression Set",
+    "cover": "angri-sprite-idle",
+    "caption": "The full dialogue sprite set for the player character. Every expression is keyed off one base pose so the set stays visually consistent and cheap to extend when new story beats need new emotions.",
+    "tags": [
+      "sprite set",
+      "expression",
+      "production"
+    ]
+  },
+  "yuli-expressions": {
+    "section": "fish-game",
+    "title": "Yuli - Expression Set",
+    "cover": "yuli-sprite-base",
+    "caption": "Matching dialogue sprite set for Yuli. Built to the same base-pose rule as Ang-ri's so the two characters sit together on screen without one reading as drawn later or by someone else.",
+    "tags": [
+      "sprite set",
+      "expression",
+      "production"
+    ]
+  }
+};
+
 const WORKS = [
   {
     "slug": "deep-dark-key-art",
@@ -75,118 +101,6 @@ const WORKS = [
     "thumb": "images/thumb/group-concept-sketch.jpg"
   },
   {
-    "slug": "angri-sprite-idle",
-    "section": "fish-game",
-    "title": "Ang-ri - Idle",
-    "caption": "Neutral dialogue sprite. The base pose every other expression is keyed from.",
-    "tags": [
-      "sprite",
-      "expression"
-    ],
-    "w": 768,
-    "h": 1024,
-    "full": "images/full/angri-sprite-idle.jpg",
-    "thumb": "images/thumb/angri-sprite-idle.jpg"
-  },
-  {
-    "slug": "angri-sprite-joy",
-    "section": "fish-game",
-    "title": "Ang-ri - Joy",
-    "caption": "Expression variant. Brow and lure position carry the emotion so the body art can be reused.",
-    "tags": [
-      "sprite",
-      "expression"
-    ],
-    "w": 768,
-    "h": 1024,
-    "full": "images/full/angri-sprite-joy.jpg",
-    "thumb": "images/thumb/angri-sprite-joy.jpg"
-  },
-  {
-    "slug": "angri-sprite-depressed",
-    "section": "fish-game",
-    "title": "Ang-ri - Downcast",
-    "caption": "Expression variant written for the Chapter 1 loss beat.",
-    "tags": [
-      "sprite",
-      "expression"
-    ],
-    "w": 768,
-    "h": 1024,
-    "full": "images/full/angri-sprite-depressed.jpg",
-    "thumb": "images/thumb/angri-sprite-depressed.jpg"
-  },
-  {
-    "slug": "angri-sprite-nooutline",
-    "section": "fish-game",
-    "title": "Ang-ri - Outline Test",
-    "caption": "Outline-free variant, tested for readability against dark underwater backgrounds.",
-    "tags": [
-      "sprite",
-      "process"
-    ],
-    "w": 768,
-    "h": 1024,
-    "full": "images/full/angri-sprite-nooutline.jpg",
-    "thumb": "images/thumb/angri-sprite-nooutline.jpg"
-  },
-  {
-    "slug": "yuli-sprite-base",
-    "section": "fish-game",
-    "title": "Yuli - Idle",
-    "caption": "Neutral dialogue sprite for Ang-ri's adopted sister.",
-    "tags": [
-      "sprite",
-      "expression"
-    ],
-    "w": 768,
-    "h": 1024,
-    "full": "images/full/yuli-sprite-base.jpg",
-    "thumb": "images/thumb/yuli-sprite-base.jpg"
-  },
-  {
-    "slug": "yuli-sprite-happy",
-    "section": "fish-game",
-    "title": "Yuli - Happy",
-    "caption": "Expression variant.",
-    "tags": [
-      "sprite",
-      "expression"
-    ],
-    "w": 768,
-    "h": 1024,
-    "full": "images/full/yuli-sprite-happy.jpg",
-    "thumb": "images/thumb/yuli-sprite-happy.jpg"
-  },
-  {
-    "slug": "yuli-sprite-sigh",
-    "section": "fish-game",
-    "title": "Yuli - Sigh",
-    "caption": "Expression variant.",
-    "tags": [
-      "sprite",
-      "expression"
-    ],
-    "w": 768,
-    "h": 1024,
-    "full": "images/full/yuli-sprite-sigh.jpg",
-    "thumb": "images/thumb/yuli-sprite-sigh.jpg"
-  },
-  {
-    "slug": "yuli-sprite-nooutline",
-    "section": "fish-game",
-    "title": "Yuli - Outline Test",
-    "caption": "Outline-free variant for background-contrast testing.",
-    "tags": [
-      "sprite",
-      "process"
-    ],
-    "w": 768,
-    "h": 1024,
-    "full": "images/full/yuli-sprite-nooutline.jpg",
-    "thumb": "images/thumb/yuli-sprite-nooutline.jpg"
-  },
-  {
     "slug": "angri-sprite-original",
     "section": "fish-game",
     "title": "Ang-ri - First Sprite Pass",
@@ -216,49 +130,163 @@ const WORKS = [
     "thumb": "images/thumb/kimono-concept-sketch.jpg"
   },
   {
-    "slug": "creature-cloud-beast",
-    "section": "creatures",
-    "title": "Sun-Eye Guardian",
-    "caption": "Boss-tier creature design. The floating solar sigil doubles as a readable tell for attack timing; layered feather and cloud forms keep the mass legible against a bright sky.",
+    "slug": "angri-sprite-idle",
+    "section": "fish-game",
+    "title": "Idle",
+    "caption": "Neutral dialogue sprite. The base pose every other expression is keyed from.",
     "tags": [
-      "creature design",
-      "boss",
-      "rendering"
+      "sprite"
+    ],
+    "w": 768,
+    "h": 1024,
+    "full": "images/full/angri-sprite-idle.jpg",
+    "thumb": "images/thumb/angri-sprite-idle.jpg",
+    "album": "angri-expressions"
+  },
+  {
+    "slug": "angri-sprite-joy",
+    "section": "fish-game",
+    "title": "Joy",
+    "caption": "Brow and lure position carry the emotion so the body art stays reusable.",
+    "tags": [
+      "sprite"
+    ],
+    "w": 768,
+    "h": 1024,
+    "full": "images/full/angri-sprite-joy.jpg",
+    "thumb": "images/thumb/angri-sprite-joy.jpg",
+    "album": "angri-expressions"
+  },
+  {
+    "slug": "angri-sprite-depressed",
+    "section": "fish-game",
+    "title": "Downcast",
+    "caption": "Written for the Chapter 1 loss beat.",
+    "tags": [
+      "sprite"
+    ],
+    "w": 768,
+    "h": 1024,
+    "full": "images/full/angri-sprite-depressed.jpg",
+    "thumb": "images/thumb/angri-sprite-depressed.jpg",
+    "album": "angri-expressions"
+  },
+  {
+    "slug": "angri-sprite-nooutline",
+    "section": "fish-game",
+    "title": "Outline Test",
+    "caption": "Outline-free variant, tested for readability against dark underwater backgrounds.",
+    "tags": [
+      "sprite",
+      "process"
+    ],
+    "w": 768,
+    "h": 1024,
+    "full": "images/full/angri-sprite-nooutline.jpg",
+    "thumb": "images/thumb/angri-sprite-nooutline.jpg",
+    "album": "angri-expressions"
+  },
+  {
+    "slug": "yuli-sprite-base",
+    "section": "fish-game",
+    "title": "Idle",
+    "caption": "Neutral dialogue sprite for Ang-ri's adopted sister.",
+    "tags": [
+      "sprite"
+    ],
+    "w": 768,
+    "h": 1024,
+    "full": "images/full/yuli-sprite-base.jpg",
+    "thumb": "images/thumb/yuli-sprite-base.jpg",
+    "album": "yuli-expressions"
+  },
+  {
+    "slug": "yuli-sprite-happy",
+    "section": "fish-game",
+    "title": "Happy",
+    "caption": "Expression variant.",
+    "tags": [
+      "sprite"
+    ],
+    "w": 768,
+    "h": 1024,
+    "full": "images/full/yuli-sprite-happy.jpg",
+    "thumb": "images/thumb/yuli-sprite-happy.jpg",
+    "album": "yuli-expressions"
+  },
+  {
+    "slug": "yuli-sprite-sigh",
+    "section": "fish-game",
+    "title": "Sigh",
+    "caption": "Expression variant.",
+    "tags": [
+      "sprite"
+    ],
+    "w": 768,
+    "h": 1024,
+    "full": "images/full/yuli-sprite-sigh.jpg",
+    "thumb": "images/thumb/yuli-sprite-sigh.jpg",
+    "album": "yuli-expressions"
+  },
+  {
+    "slug": "yuli-sprite-nooutline",
+    "section": "fish-game",
+    "title": "Outline Test",
+    "caption": "Outline-free variant for background-contrast testing.",
+    "tags": [
+      "sprite",
+      "process"
+    ],
+    "w": 768,
+    "h": 1024,
+    "full": "images/full/yuli-sprite-nooutline.jpg",
+    "thumb": "images/thumb/yuli-sprite-nooutline.jpg",
+    "album": "yuli-expressions"
+  },
+  {
+    "slug": "msm-sky-guardian",
+    "section": "fanart",
+    "title": "Sky Guardian",
+    "caption": "Fan art rendered at full illustration scale. Layered feather, cloud and fur forms keep a very large silhouette readable against a bright, low-contrast sky - the hardest part of the piece was stopping the creature from dissolving into its background.",
+    "tags": [
+      "fan art",
+      "rendering",
+      "creature"
     ],
     "w": 1280,
     "h": 1600,
-    "full": "images/full/creature-cloud-beast.jpg",
-    "thumb": "images/thumb/creature-cloud-beast.jpg"
+    "full": "images/full/msm-sky-guardian.jpg",
+    "thumb": "images/thumb/msm-sky-guardian.jpg"
   },
   {
-    "slug": "creature-pond",
-    "section": "creatures",
-    "title": "Lily Pond - Encounter",
-    "caption": "Two-creature staging in a fully painted environment. Depth is carried by water clarity and cast shadow rather than atmospheric haze.",
+    "slug": "msm-lily-pond",
+    "section": "fanart",
+    "title": "Lily Pond",
+    "caption": "Two characters staged in a fully painted environment. Depth is carried by water clarity and cast shadow rather than atmospheric haze, so the foreground stays fully saturated.",
     "tags": [
-      "creature design",
+      "fan art",
       "environment",
       "rendering"
     ],
     "w": 1600,
     "h": 1280,
-    "full": "images/full/creature-pond.jpg",
-    "thumb": "images/thumb/creature-pond.jpg"
+    "full": "images/full/msm-lily-pond.jpg",
+    "thumb": "images/thumb/msm-lily-pond.jpg"
   },
   {
-    "slug": "creature-blossom",
-    "section": "creatures",
-    "title": "Blossom Valley - Encounter",
-    "caption": "Companion piece in a warmer key. A backlit cherry canopy and low horizon push the two creatures forward as the focal read.",
+    "slug": "msm-blossom-valley",
+    "section": "fanart",
+    "title": "Blossom Valley",
+    "caption": "Companion piece in a warmer key. A backlit cherry canopy and low horizon push both characters forward as the focal read.",
     "tags": [
-      "creature design",
+      "fan art",
       "environment",
       "rendering"
     ],
     "w": 1280,
     "h": 1600,
-    "full": "images/full/creature-blossom.jpg",
-    "thumb": "images/thumb/creature-blossom.jpg"
+    "full": "images/full/msm-blossom-valley.jpg",
+    "thumb": "images/thumb/msm-blossom-valley.jpg"
   },
   {
     "slug": "illus-crowned",

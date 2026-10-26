@@ -1,410 +1,438 @@
-[
-  {
-    "slug": "deep-dark-key-art",
-    "section": "fish-game",
-    "title": "The Deep Dark - Key Art",
-    "caption": "Promotional key art for Chapter 1. Pure black-and-white rendering keeps the read legible at thumbnail size while establishing the chapter's claustrophobic, lightless tone.",
-    "tags": [
-      "key art",
-      "marketing",
-      "monochrome"
-    ],
-    "w": 768,
-    "h": 1024,
-    "full": "images/full/deep-dark-key-art.jpg",
-    "thumb": "images/thumb/deep-dark-key-art.jpg"
+{
+  "albums": {
+    "angri-expressions": {
+      "section": "fish-game",
+      "title": "Ang-ri - Expression Set",
+      "cover": "angri-sprite-idle",
+      "caption": "The full dialogue sprite set for the player character. Every expression is keyed off one base pose so the set stays visually consistent and cheap to extend when new story beats need new emotions.",
+      "tags": [
+        "sprite set",
+        "expression",
+        "production"
+      ]
+    },
+    "yuli-expressions": {
+      "section": "fish-game",
+      "title": "Yuli - Expression Set",
+      "cover": "yuli-sprite-base",
+      "caption": "Matching dialogue sprite set for Yuli. Built to the same base-pose rule as Ang-ri's so the two characters sit together on screen without one reading as drawn later or by someone else.",
+      "tags": [
+        "sprite set",
+        "expression",
+        "production"
+      ]
+    }
   },
-  {
-    "slug": "coelacanth-poster",
-    "section": "fish-game",
-    "title": "Coelacanth - Title Treatment",
-    "caption": "Early title card and logotype study. Hand-lettered type paired with anglerfish and skeletal motifs to set the indie-horror register before a single line of dialogue.",
-    "tags": [
-      "key art",
-      "typography",
-      "monochrome"
-    ],
-    "w": 1024,
-    "h": 768,
-    "full": "images/full/coelacanth-poster.jpg",
-    "thumb": "images/thumb/coelacanth-poster.jpg"
-  },
-  {
-    "slug": "hud-health-bar",
-    "section": "fish-game",
-    "title": "Ang-ri - Portrait HUD & Health Bar",
-    "caption": "In-game HUD mockup: character bust framed by a bone cartouche with heart-pip health. Designed so the frame art survives cropping to a 1:1 UI slot.",
-    "tags": [
-      "UI/UX",
-      "HUD",
-      "character"
-    ],
-    "w": 640,
-    "h": 640,
-    "full": "images/full/hud-health-bar.jpg",
-    "thumb": "images/thumb/hud-health-bar.jpg"
-  },
-  {
-    "slug": "angri-character-sheet",
-    "section": "fish-game",
-    "title": "Ang-ri - Character Sheet (V1, scrapped)",
-    "caption": "A full-body pass that was ultimately cut. Kept in the portfolio deliberately: the bioluminescent lure, fin-ears and tail silhouette all survived into the final design.",
-    "tags": [
-      "character design",
-      "process"
-    ],
-    "w": 1280,
-    "h": 1600,
-    "full": "images/full/angri-character-sheet.jpg",
-    "thumb": "images/thumb/angri-character-sheet.jpg"
-  },
-  {
-    "slug": "group-concept-sketch",
-    "section": "fish-game",
-    "title": "Main Cast - Ensemble Sketches",
-    "caption": "Exploratory pass on the core trio. Silhouette and proportion are varied first so each character reads distinctly before any rendering is committed.",
-    "tags": [
-      "character design",
-      "sketch",
-      "ensemble"
-    ],
-    "w": 1200,
-    "h": 1600,
-    "full": "images/full/group-concept-sketch.jpg",
-    "thumb": "images/thumb/group-concept-sketch.jpg"
-  },
-  {
-    "slug": "angri-sprite-idle",
-    "section": "fish-game",
-    "title": "Ang-ri - Idle",
-    "caption": "Neutral dialogue sprite. The base pose every other expression is keyed from.",
-    "tags": [
-      "sprite",
-      "expression"
-    ],
-    "w": 768,
-    "h": 1024,
-    "full": "images/full/angri-sprite-idle.jpg",
-    "thumb": "images/thumb/angri-sprite-idle.jpg"
-  },
-  {
-    "slug": "angri-sprite-joy",
-    "section": "fish-game",
-    "title": "Ang-ri - Joy",
-    "caption": "Expression variant. Brow and lure position carry the emotion so the body art can be reused.",
-    "tags": [
-      "sprite",
-      "expression"
-    ],
-    "w": 768,
-    "h": 1024,
-    "full": "images/full/angri-sprite-joy.jpg",
-    "thumb": "images/thumb/angri-sprite-joy.jpg"
-  },
-  {
-    "slug": "angri-sprite-depressed",
-    "section": "fish-game",
-    "title": "Ang-ri - Downcast",
-    "caption": "Expression variant written for the Chapter 1 loss beat.",
-    "tags": [
-      "sprite",
-      "expression"
-    ],
-    "w": 768,
-    "h": 1024,
-    "full": "images/full/angri-sprite-depressed.jpg",
-    "thumb": "images/thumb/angri-sprite-depressed.jpg"
-  },
-  {
-    "slug": "angri-sprite-nooutline",
-    "section": "fish-game",
-    "title": "Ang-ri - Outline Test",
-    "caption": "Outline-free variant, tested for readability against dark underwater backgrounds.",
-    "tags": [
-      "sprite",
-      "process"
-    ],
-    "w": 768,
-    "h": 1024,
-    "full": "images/full/angri-sprite-nooutline.jpg",
-    "thumb": "images/thumb/angri-sprite-nooutline.jpg"
-  },
-  {
-    "slug": "yuli-sprite-base",
-    "section": "fish-game",
-    "title": "Yuli - Idle",
-    "caption": "Neutral dialogue sprite for Ang-ri's adopted sister.",
-    "tags": [
-      "sprite",
-      "expression"
-    ],
-    "w": 768,
-    "h": 1024,
-    "full": "images/full/yuli-sprite-base.jpg",
-    "thumb": "images/thumb/yuli-sprite-base.jpg"
-  },
-  {
-    "slug": "yuli-sprite-happy",
-    "section": "fish-game",
-    "title": "Yuli - Happy",
-    "caption": "Expression variant.",
-    "tags": [
-      "sprite",
-      "expression"
-    ],
-    "w": 768,
-    "h": 1024,
-    "full": "images/full/yuli-sprite-happy.jpg",
-    "thumb": "images/thumb/yuli-sprite-happy.jpg"
-  },
-  {
-    "slug": "yuli-sprite-sigh",
-    "section": "fish-game",
-    "title": "Yuli - Sigh",
-    "caption": "Expression variant.",
-    "tags": [
-      "sprite",
-      "expression"
-    ],
-    "w": 768,
-    "h": 1024,
-    "full": "images/full/yuli-sprite-sigh.jpg",
-    "thumb": "images/thumb/yuli-sprite-sigh.jpg"
-  },
-  {
-    "slug": "yuli-sprite-nooutline",
-    "section": "fish-game",
-    "title": "Yuli - Outline Test",
-    "caption": "Outline-free variant for background-contrast testing.",
-    "tags": [
-      "sprite",
-      "process"
-    ],
-    "w": 768,
-    "h": 1024,
-    "full": "images/full/yuli-sprite-nooutline.jpg",
-    "thumb": "images/thumb/yuli-sprite-nooutline.jpg"
-  },
-  {
-    "slug": "angri-sprite-original",
-    "section": "fish-game",
-    "title": "Ang-ri - First Sprite Pass",
-    "caption": "The earliest rendered sprite, kept as a reference point for how far the design has moved.",
-    "tags": [
-      "sprite",
-      "process"
-    ],
-    "w": 640,
-    "h": 480,
-    "full": "images/full/angri-sprite-original.jpg",
-    "thumb": "images/thumb/angri-sprite-original.jpg"
-  },
-  {
-    "slug": "kimono-concept-sketch",
-    "section": "fish-game",
-    "title": "Robed Figure - Concept Sketch",
-    "caption": "Construction sketch for a court character. Drapery and ribbon flow are blocked in loosely to test how the silhouette moves underwater.",
-    "tags": [
-      "sketch",
-      "costume",
-      "process"
-    ],
-    "w": 768,
-    "h": 1024,
-    "full": "images/full/kimono-concept-sketch.jpg",
-    "thumb": "images/thumb/kimono-concept-sketch.jpg"
-  },
-  {
-    "slug": "creature-cloud-beast",
-    "section": "creatures",
-    "title": "Sun-Eye Guardian",
-    "caption": "Boss-tier creature design. The floating solar sigil doubles as a readable tell for attack timing; layered feather and cloud forms keep the mass legible against a bright sky.",
-    "tags": [
-      "creature design",
-      "boss",
-      "rendering"
-    ],
-    "w": 1280,
-    "h": 1600,
-    "full": "images/full/creature-cloud-beast.jpg",
-    "thumb": "images/thumb/creature-cloud-beast.jpg"
-  },
-  {
-    "slug": "creature-pond",
-    "section": "creatures",
-    "title": "Lily Pond - Encounter",
-    "caption": "Two-creature staging in a fully painted environment. Depth is carried by water clarity and cast shadow rather than atmospheric haze.",
-    "tags": [
-      "creature design",
-      "environment",
-      "rendering"
-    ],
-    "w": 1600,
-    "h": 1280,
-    "full": "images/full/creature-pond.jpg",
-    "thumb": "images/thumb/creature-pond.jpg"
-  },
-  {
-    "slug": "creature-blossom",
-    "section": "creatures",
-    "title": "Blossom Valley - Encounter",
-    "caption": "Companion piece in a warmer key. A backlit cherry canopy and low horizon push the two creatures forward as the focal read.",
-    "tags": [
-      "creature design",
-      "environment",
-      "rendering"
-    ],
-    "w": 1280,
-    "h": 1600,
-    "full": "images/full/creature-blossom.jpg",
-    "thumb": "images/thumb/creature-blossom.jpg"
-  },
-  {
-    "slug": "illus-crowned",
-    "section": "illustration",
-    "title": "Crowned",
-    "caption": "Painterly figure study. Scale is built entirely through relation - a small body cradled in oversized hands beneath a severed face.",
-    "tags": [
-      "illustration",
-      "painting",
-      "surreal"
-    ],
-    "w": 908,
-    "h": 1600,
-    "full": "images/full/illus-crowned.jpg",
-    "thumb": "images/thumb/illus-crowned.jpg"
-  },
-  {
-    "slug": "illus-rabbit-room",
-    "section": "illustration",
-    "title": "Rabbit Room",
-    "caption": "Horror composition in a restricted red and black key. The duplicated figure and encroaching hands build the threat without an explicit subject.",
-    "tags": [
-      "illustration",
-      "painting",
-      "horror"
-    ],
-    "w": 1280,
-    "h": 1600,
-    "full": "images/full/illus-rabbit-room.jpg",
-    "thumb": "images/thumb/illus-rabbit-room.jpg"
-  },
-  {
-    "slug": "illus-reliquary",
-    "section": "illustration",
-    "title": "Reliquary",
-    "caption": "Flat primary blocking against painted stained glass. Pushes how far a palette can be reduced before form stops reading.",
-    "tags": [
-      "illustration",
-      "painting",
-      "graphic"
-    ],
-    "w": 900,
-    "h": 1600,
-    "full": "images/full/illus-reliquary.jpg",
-    "thumb": "images/thumb/illus-reliquary.jpg"
-  },
-  {
-    "slug": "illus-vday",
-    "section": "illustration",
-    "title": "Offering",
-    "caption": "Seasonal illustration mixing a rendered portrait with an inset chibi - a deliberate test of two rendering registers inside one frame.",
-    "tags": [
-      "illustration",
-      "painting",
-      "character"
-    ],
-    "w": 1280,
-    "h": 1600,
-    "full": "images/full/illus-vday.jpg",
-    "thumb": "images/thumb/illus-vday.jpg"
-  },
-  {
-    "slug": "illus-ribcage",
-    "section": "illustration",
-    "title": "Pixel Heart",
-    "caption": "Anatomical framing with an intentionally low-resolution heart. The resolution clash is the subject rather than an artefact.",
-    "tags": [
-      "illustration",
-      "painting",
-      "graphic"
-    ],
-    "w": 1280,
-    "h": 1600,
-    "full": "images/full/illus-ribcage.jpg",
-    "thumb": "images/thumb/illus-ribcage.jpg"
-  },
-  {
-    "slug": "illus-hanfu",
-    "section": "illustration",
-    "title": "Still Season",
-    "caption": "A quieter register: soft-edged rendering, patterned flats and a high-key palette, built to contrast the darker work in this section.",
-    "tags": [
-      "illustration",
-      "painting",
-      "portrait"
-    ],
-    "w": 1200,
-    "h": 1600,
-    "full": "images/full/illus-hanfu.jpg",
-    "thumb": "images/thumb/illus-hanfu.jpg"
-  },
-  {
-    "slug": "illus-oni-portrait",
-    "section": "illustration",
-    "title": "Grin",
-    "caption": "Sticker-style character bust. A hard white keyline and torn red field make the piece work as a standalone cut-out asset.",
-    "tags": [
-      "character design",
-      "illustration"
-    ],
-    "w": 1280,
-    "h": 1600,
-    "full": "images/full/illus-oni-portrait.jpg",
-    "thumb": "images/thumb/illus-oni-portrait.jpg"
-  },
-  {
-    "slug": "illus-oc-sheet",
-    "section": "illustration",
-    "title": "Original Character - Reference Sheet",
-    "caption": "Working reference sheet: a rendered bust paired with a chibi full-body and margin notes, formatted the way a sheet gets handed to a collaborator.",
-    "tags": [
-      "character design",
-      "reference sheet"
-    ],
-    "w": 1600,
-    "h": 1200,
-    "full": "images/full/illus-oc-sheet.jpg",
-    "thumb": "images/thumb/illus-oc-sheet.jpg"
-  },
-  {
-    "slug": "merch-keychains-pair",
-    "section": "commissions",
-    "title": "Qanata - Acrylic Keychain Pair",
-    "caption": "Commissioned merchandise for a school event. Drawn to a keychain cut-line with a bleed outline, hole placement and a branded colourway per character.",
-    "tags": [
-      "commission",
-      "merch",
-      "product"
-    ],
-    "w": 1280,
-    "h": 1600,
-    "full": "images/full/merch-keychains-pair.jpg",
-    "thumb": "images/thumb/merch-keychains-pair.jpg"
-  },
-  {
-    "slug": "merch-keychain-tiwi",
-    "section": "commissions",
-    "title": "Tiwi - Acrylic Keychain",
-    "caption": "Second design in the same run. A softer palette and grass base vary the silhouette across the set.",
-    "tags": [
-      "commission",
-      "merch",
-      "product"
-    ],
-    "w": 1600,
-    "h": 1600,
-    "full": "images/full/merch-keychain-tiwi.jpg",
-    "thumb": "images/thumb/merch-keychain-tiwi.jpg"
-  }
-]
+  "works": [
+    {
+      "slug": "deep-dark-key-art",
+      "section": "fish-game",
+      "title": "The Deep Dark - Key Art",
+      "caption": "Promotional key art for Chapter 1. Pure black-and-white rendering keeps the read legible at thumbnail size while establishing the chapter's claustrophobic, lightless tone.",
+      "tags": [
+        "key art",
+        "marketing",
+        "monochrome"
+      ],
+      "w": 768,
+      "h": 1024,
+      "full": "images/full/deep-dark-key-art.jpg",
+      "thumb": "images/thumb/deep-dark-key-art.jpg"
+    },
+    {
+      "slug": "coelacanth-poster",
+      "section": "fish-game",
+      "title": "Coelacanth - Title Treatment",
+      "caption": "Early title card and logotype study. Hand-lettered type paired with anglerfish and skeletal motifs to set the indie-horror register before a single line of dialogue.",
+      "tags": [
+        "key art",
+        "typography",
+        "monochrome"
+      ],
+      "w": 1024,
+      "h": 768,
+      "full": "images/full/coelacanth-poster.jpg",
+      "thumb": "images/thumb/coelacanth-poster.jpg"
+    },
+    {
+      "slug": "hud-health-bar",
+      "section": "fish-game",
+      "title": "Ang-ri - Portrait HUD & Health Bar",
+      "caption": "In-game HUD mockup: character bust framed by a bone cartouche with heart-pip health. Designed so the frame art survives cropping to a 1:1 UI slot.",
+      "tags": [
+        "UI/UX",
+        "HUD",
+        "character"
+      ],
+      "w": 640,
+      "h": 640,
+      "full": "images/full/hud-health-bar.jpg",
+      "thumb": "images/thumb/hud-health-bar.jpg"
+    },
+    {
+      "slug": "angri-character-sheet",
+      "section": "fish-game",
+      "title": "Ang-ri - Character Sheet (V1, scrapped)",
+      "caption": "A full-body pass that was ultimately cut. Kept in the portfolio deliberately: the bioluminescent lure, fin-ears and tail silhouette all survived into the final design.",
+      "tags": [
+        "character design",
+        "process"
+      ],
+      "w": 1280,
+      "h": 1600,
+      "full": "images/full/angri-character-sheet.jpg",
+      "thumb": "images/thumb/angri-character-sheet.jpg"
+    },
+    {
+      "slug": "group-concept-sketch",
+      "section": "fish-game",
+      "title": "Main Cast - Ensemble Sketches",
+      "caption": "Exploratory pass on the core trio. Silhouette and proportion are varied first so each character reads distinctly before any rendering is committed.",
+      "tags": [
+        "character design",
+        "sketch",
+        "ensemble"
+      ],
+      "w": 1200,
+      "h": 1600,
+      "full": "images/full/group-concept-sketch.jpg",
+      "thumb": "images/thumb/group-concept-sketch.jpg"
+    },
+    {
+      "slug": "angri-sprite-original",
+      "section": "fish-game",
+      "title": "Ang-ri - First Sprite Pass",
+      "caption": "The earliest rendered sprite, kept as a reference point for how far the design has moved.",
+      "tags": [
+        "sprite",
+        "process"
+      ],
+      "w": 640,
+      "h": 480,
+      "full": "images/full/angri-sprite-original.jpg",
+      "thumb": "images/thumb/angri-sprite-original.jpg"
+    },
+    {
+      "slug": "kimono-concept-sketch",
+      "section": "fish-game",
+      "title": "Robed Figure - Concept Sketch",
+      "caption": "Construction sketch for a court character. Drapery and ribbon flow are blocked in loosely to test how the silhouette moves underwater.",
+      "tags": [
+        "sketch",
+        "costume",
+        "process"
+      ],
+      "w": 768,
+      "h": 1024,
+      "full": "images/full/kimono-concept-sketch.jpg",
+      "thumb": "images/thumb/kimono-concept-sketch.jpg"
+    },
+    {
+      "slug": "angri-sprite-idle",
+      "section": "fish-game",
+      "title": "Idle",
+      "caption": "Neutral dialogue sprite. The base pose every other expression is keyed from.",
+      "tags": [
+        "sprite"
+      ],
+      "w": 768,
+      "h": 1024,
+      "full": "images/full/angri-sprite-idle.jpg",
+      "thumb": "images/thumb/angri-sprite-idle.jpg",
+      "album": "angri-expressions"
+    },
+    {
+      "slug": "angri-sprite-joy",
+      "section": "fish-game",
+      "title": "Joy",
+      "caption": "Brow and lure position carry the emotion so the body art stays reusable.",
+      "tags": [
+        "sprite"
+      ],
+      "w": 768,
+      "h": 1024,
+      "full": "images/full/angri-sprite-joy.jpg",
+      "thumb": "images/thumb/angri-sprite-joy.jpg",
+      "album": "angri-expressions"
+    },
+    {
+      "slug": "angri-sprite-depressed",
+      "section": "fish-game",
+      "title": "Downcast",
+      "caption": "Written for the Chapter 1 loss beat.",
+      "tags": [
+        "sprite"
+      ],
+      "w": 768,
+      "h": 1024,
+      "full": "images/full/angri-sprite-depressed.jpg",
+      "thumb": "images/thumb/angri-sprite-depressed.jpg",
+      "album": "angri-expressions"
+    },
+    {
+      "slug": "angri-sprite-nooutline",
+      "section": "fish-game",
+      "title": "Outline Test",
+      "caption": "Outline-free variant, tested for readability against dark underwater backgrounds.",
+      "tags": [
+        "sprite",
+        "process"
+      ],
+      "w": 768,
+      "h": 1024,
+      "full": "images/full/angri-sprite-nooutline.jpg",
+      "thumb": "images/thumb/angri-sprite-nooutline.jpg",
+      "album": "angri-expressions"
+    },
+    {
+      "slug": "yuli-sprite-base",
+      "section": "fish-game",
+      "title": "Idle",
+      "caption": "Neutral dialogue sprite for Ang-ri's adopted sister.",
+      "tags": [
+        "sprite"
+      ],
+      "w": 768,
+      "h": 1024,
+      "full": "images/full/yuli-sprite-base.jpg",
+      "thumb": "images/thumb/yuli-sprite-base.jpg",
+      "album": "yuli-expressions"
+    },
+    {
+      "slug": "yuli-sprite-happy",
+      "section": "fish-game",
+      "title": "Happy",
+      "caption": "Expression variant.",
+      "tags": [
+        "sprite"
+      ],
+      "w": 768,
+      "h": 1024,
+      "full": "images/full/yuli-sprite-happy.jpg",
+      "thumb": "images/thumb/yuli-sprite-happy.jpg",
+      "album": "yuli-expressions"
+    },
+    {
+      "slug": "yuli-sprite-sigh",
+      "section": "fish-game",
+      "title": "Sigh",
+      "caption": "Expression variant.",
+      "tags": [
+        "sprite"
+      ],
+      "w": 768,
+      "h": 1024,
+      "full": "images/full/yuli-sprite-sigh.jpg",
+      "thumb": "images/thumb/yuli-sprite-sigh.jpg",
+      "album": "yuli-expressions"
+    },
+    {
+      "slug": "yuli-sprite-nooutline",
+      "section": "fish-game",
+      "title": "Outline Test",
+      "caption": "Outline-free variant for background-contrast testing.",
+      "tags": [
+        "sprite",
+        "process"
+      ],
+      "w": 768,
+      "h": 1024,
+      "full": "images/full/yuli-sprite-nooutline.jpg",
+      "thumb": "images/thumb/yuli-sprite-nooutline.jpg",
+      "album": "yuli-expressions"
+    },
+    {
+      "slug": "msm-sky-guardian",
+      "section": "fanart",
+      "title": "Sky Guardian",
+      "caption": "Fan art rendered at full illustration scale. Layered feather, cloud and fur forms keep a very large silhouette readable against a bright, low-contrast sky - the hardest part of the piece was stopping the creature from dissolving into its background.",
+      "tags": [
+        "fan art",
+        "rendering",
+        "creature"
+      ],
+      "w": 1280,
+      "h": 1600,
+      "full": "images/full/msm-sky-guardian.jpg",
+      "thumb": "images/thumb/msm-sky-guardian.jpg"
+    },
+    {
+      "slug": "msm-lily-pond",
+      "section": "fanart",
+      "title": "Lily Pond",
+      "caption": "Two characters staged in a fully painted environment. Depth is carried by water clarity and cast shadow rather than atmospheric haze, so the foreground stays fully saturated.",
+      "tags": [
+        "fan art",
+        "environment",
+        "rendering"
+      ],
+      "w": 1600,
+      "h": 1280,
+      "full": "images/full/msm-lily-pond.jpg",
+      "thumb": "images/thumb/msm-lily-pond.jpg"
+    },
+    {
+      "slug": "msm-blossom-valley",
+      "section": "fanart",
+      "title": "Blossom Valley",
+      "caption": "Companion piece in a warmer key. A backlit cherry canopy and low horizon push both characters forward as the focal read.",
+      "tags": [
+        "fan art",
+        "environment",
+        "rendering"
+      ],
+      "w": 1280,
+      "h": 1600,
+      "full": "images/full/msm-blossom-valley.jpg",
+      "thumb": "images/thumb/msm-blossom-valley.jpg"
+    },
+    {
+      "slug": "illus-crowned",
+      "section": "illustration",
+      "title": "Crowned",
+      "caption": "Painterly figure study. Scale is built entirely through relation - a small body cradled in oversized hands beneath a severed face.",
+      "tags": [
+        "illustration",
+        "painting",
+        "surreal"
+      ],
+      "w": 908,
+      "h": 1600,
+      "full": "images/full/illus-crowned.jpg",
+      "thumb": "images/thumb/illus-crowned.jpg"
+    },
+    {
+      "slug": "illus-rabbit-room",
+      "section": "illustration",
+      "title": "Rabbit Room",
+      "caption": "Horror composition in a restricted red and black key. The duplicated figure and encroaching hands build the threat without an explicit subject.",
+      "tags": [
+        "illustration",
+        "painting",
+        "horror"
+      ],
+      "w": 1280,
+      "h": 1600,
+      "full": "images/full/illus-rabbit-room.jpg",
+      "thumb": "images/thumb/illus-rabbit-room.jpg"
+    },
+    {
+      "slug": "illus-reliquary",
+      "section": "illustration",
+      "title": "Reliquary",
+      "caption": "Flat primary blocking against painted stained glass. Pushes how far a palette can be reduced before form stops reading.",
+      "tags": [
+        "illustration",
+        "painting",
+        "graphic"
+      ],
+      "w": 900,
+      "h": 1600,
+      "full": "images/full/illus-reliquary.jpg",
+      "thumb": "images/thumb/illus-reliquary.jpg"
+    },
+    {
+      "slug": "illus-vday",
+      "section": "illustration",
+      "title": "Offering",
+      "caption": "Seasonal illustration mixing a rendered portrait with an inset chibi - a deliberate test of two rendering registers inside one frame.",
+      "tags": [
+        "illustration",
+        "painting",
+        "character"
+      ],
+      "w": 1280,
+      "h": 1600,
+      "full": "images/full/illus-vday.jpg",
+      "thumb": "images/thumb/illus-vday.jpg"
+    },
+    {
+      "slug": "illus-ribcage",
+      "section": "illustration",
+      "title": "Pixel Heart",
+      "caption": "Anatomical framing with an intentionally low-resolution heart. The resolution clash is the subject rather than an artefact.",
+      "tags": [
+        "illustration",
+        "painting",
+        "graphic"
+      ],
+      "w": 1280,
+      "h": 1600,
+      "full": "images/full/illus-ribcage.jpg",
+      "thumb": "images/thumb/illus-ribcage.jpg"
+    },
+    {
+      "slug": "illus-hanfu",
+      "section": "illustration",
+      "title": "Still Season",
+      "caption": "A quieter register: soft-edged rendering, patterned flats and a high-key palette, built to contrast the darker work in this section.",
+      "tags": [
+        "illustration",
+        "painting",
+        "portrait"
+      ],
+      "w": 1200,
+      "h": 1600,
+      "full": "images/full/illus-hanfu.jpg",
+      "thumb": "images/thumb/illus-hanfu.jpg"
+    },
+    {
+      "slug": "illus-oni-portrait",
+      "section": "illustration",
+      "title": "Grin",
+      "caption": "Sticker-style character bust. A hard white keyline and torn red field make the piece work as a standalone cut-out asset.",
+      "tags": [
+        "character design",
+        "illustration"
+      ],
+      "w": 1280,
+      "h": 1600,
+      "full": "images/full/illus-oni-portrait.jpg",
+      "thumb": "images/thumb/illus-oni-portrait.jpg"
+    },
+    {
+      "slug": "illus-oc-sheet",
+      "section": "illustration",
+      "title": "Original Character - Reference Sheet",
+      "caption": "Working reference sheet: a rendered bust paired with a chibi full-body and margin notes, formatted the way a sheet gets handed to a collaborator.",
+      "tags": [
+        "character design",
+        "reference sheet"
+      ],
+      "w": 1600,
+      "h": 1200,
+      "full": "images/full/illus-oc-sheet.jpg",
+      "thumb": "images/thumb/illus-oc-sheet.jpg"
+    },
+    {
+      "slug": "merch-keychains-pair",
+      "section": "commissions",
+      "title": "Qanata - Acrylic Keychain Pair",
+      "caption": "Commissioned merchandise for a school event. Drawn to a keychain cut-line with a bleed outline, hole placement and a branded colourway per character.",
+      "tags": [
+        "commission",
+        "merch",
+        "product"
+      ],
+      "w": 1280,
+      "h": 1600,
+      "full": "images/full/merch-keychains-pair.jpg",
+      "thumb": "images/thumb/merch-keychains-pair.jpg"
+    },
+    {
+      "slug": "merch-keychain-tiwi",
+      "section": "commissions",
+      "title": "Tiwi - Acrylic Keychain",
+      "caption": "Second design in the same run. A softer palette and grass base vary the silhouette across the set.",
+      "tags": [
+        "commission",
+        "merch",
+        "product"
+      ],
+      "w": 1600,
+      "h": 1600,
+      "full": "images/full/merch-keychain-tiwi.jpg",
+      "thumb": "images/thumb/merch-keychain-tiwi.jpg"
+    }
+  ]
+}
