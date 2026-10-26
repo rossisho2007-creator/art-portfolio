@@ -317,7 +317,4 @@
   /* ---------------- misc ---------------- */
 
   document.getElementById("year").textContent = new Date().getFullYear();
-
-  var countEl = document.querySelector("[data-count]");
-  if (countEl) countEl.textContent = WORKS.length;
 })();
