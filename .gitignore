@@ -15,3 +15,6 @@ __pycache__/
 *.psd
 *.mdp
 *.clip
+
+.vercel
+.env*
