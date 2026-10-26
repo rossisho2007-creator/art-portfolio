@@ -505,3 +505,41 @@ body.lb-open{ overflow:hidden; }
 
   .site-footer{ flex-direction:column; align-items:flex-start; }
 }
+
+/* ───────────── Cover zoom modifier ─────────────
+   For covers whose subject sits inside a tall source image: object-position
+   puts the subject at the container's centre, then the scale tightens onto it. */
+.cover--zoom img{ transform:scale(1.25); }
+.cover--zoom:hover img{ transform:scale(1.3); }
+
+/* ───────────── Profile ───────────── */
+.profile{
+  display:flex; align-items:center; gap:1.15rem;
+  margin:0 0 2rem; padding-bottom:1.7rem;
+  border-bottom:1px solid var(--line);
+}
+.profile__avatar{
+  width:112px; height:112px; flex:none;
+  border-radius:50%; object-fit:cover;
+  border:1px solid var(--line-2);
+  box-shadow:0 0 0 4px var(--bg-2), 0 10px 30px -12px rgba(0,0,0,.9);
+}
+.profile__id{ min-width:0; }
+.profile__name{
+  font-family:var(--serif); font-size:clamp(1.5rem,3vw,2rem);
+  font-weight:600; letter-spacing:-.02em; margin:0 0 .15rem; line-height:1.1;
+}
+.profile__role{
+  margin:0 0 .4rem; color:var(--muted); font-size:.93rem;
+}
+.profile__handle{ margin:0; font-size:.86rem; }
+.profile__handle a{
+  color:var(--accent); text-decoration:none;
+  border-bottom:1px solid transparent; transition:.2s var(--ease);
+}
+.profile__handle a:hover{ border-bottom-color:var(--accent); }
+
+@media (max-width:720px){
+  .profile{ gap:.9rem; }
+  .profile__avatar{ width:84px; height:84px; }
+}

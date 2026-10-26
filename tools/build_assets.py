@@ -205,6 +205,30 @@ ITEMS = [
 ]
 
 
+# ---------------------------------------------------------------------------
+# Profile picture. Cropped from the original "Crowned" artwork rather than
+# downloaded from Instagram, so it stays sharp (the Instagram CDN only serves
+# a 150x150 thumbnail, and its URLs expire).
+# ---------------------------------------------------------------------------
+PROFILE = {
+    "source": "illus-crowned",          # slug from ITEMS, read back from images/full
+    "box": (80, 360, 390, 670),         # left, top, right, bottom in source pixels
+    "size": 400,                        # output square size
+    "out": "images/profile.jpg",
+}
+
+
+def build_profile():
+    src = os.path.join(OUT, "images", "full", PROFILE["source"] + ".jpg")
+    if not os.path.exists(src):
+        print("profile: source missing,", src)
+        return
+    im = Image.open(src).convert("RGB").crop(PROFILE["box"])
+    im = im.resize((PROFILE["size"], PROFILE["size"]), Image.LANCZOS)
+    im.save(os.path.join(OUT, PROFILE["out"]), "JPEG", quality=90, optimize=True)
+    print("profile: %s -> %s (%dpx)" % (PROFILE["source"], PROFILE["out"], PROFILE["size"]))
+
+
 def main():
     manifest = []
     for slug, src, section, title, caption, tags, album in ITEMS:
@@ -237,6 +261,8 @@ def main():
     data = {"albums": ALBUMS, "works": manifest}
     with open(os.path.join(OUT, "assets", "js", "works.json"), "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
+
+    build_profile()
 
     loose = sum(1 for m in manifest if "album" not in m)
     print("\n%d images  (%d standalone + %d in %d albums)"
