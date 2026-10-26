@@ -543,3 +543,44 @@ body.lb-open{ overflow:hidden; }
   .profile{ gap:.9rem; }
   .profile__avatar{ width:84px; height:84px; }
 }
+
+/* ───────────── Lore lead + disclosure ─────────────
+   Keeps the page visual-first: one line of framing, with the full premise
+   folded away behind a toggle for anyone who wants to go deeper. */
+.lore__lead{
+  font-family:var(--serif); font-size:clamp(1.15rem,2.2vw,1.5rem);
+  font-weight:400; font-style:italic; line-height:1.45;
+  color:var(--text); max-width:46ch; margin:0 0 1.5rem;
+}
+.lore__lead strong{ font-style:normal; font-weight:600; color:var(--accent); }
+.lore__lead em{ font-style:normal; }
+
+.disclose{
+  border:1px solid var(--line); border-radius:var(--radius);
+  background:var(--bg-2); margin:0 0 2.2rem; max-width:72ch;
+}
+.disclose summary{
+  display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  padding:.95rem 1.25rem; cursor:pointer; list-style:none;
+  font-size:.76rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--muted); transition:color .2s var(--ease);
+}
+.disclose summary::-webkit-details-marker{ display:none; }
+.disclose summary:hover{ color:var(--accent); }
+.disclose__icon{
+  width:9px; height:9px; flex:none;
+  border-right:1.5px solid currentColor; border-bottom:1.5px solid currentColor;
+  transform:rotate(45deg) translate(-2px,-2px);
+  transition:transform .25s var(--ease);
+}
+.disclose[open] .disclose__icon{ transform:rotate(-135deg) translate(-2px,-2px); }
+.disclose[open] summary{ color:var(--accent); border-bottom:1px solid var(--line); }
+
+.disclose__body{ padding:1.3rem 1.25rem 1.4rem; }
+.disclose__body p{ color:var(--muted); margin:0 0 1rem; max-width:62ch; font-size:.95rem; }
+.disclose__body p:last-child{ margin-bottom:0; }
+.disclose__body em{ color:var(--text); font-style:italic; }
+.disclose__note{
+  padding-top:1rem; border-top:1px solid var(--line);
+  font-size:.86rem !important; color:var(--faint) !important;
+}

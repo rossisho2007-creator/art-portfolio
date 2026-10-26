@@ -143,34 +143,35 @@ ITEMS = [
 
  # ---------------- ILLUSTRATION ----------------
  ("illus-crowned", os.path.join(DL, "Art concept 1.jpeg"),
-  "illustration", "Crowned",
+  "illustration", "Sotto - Crowned",
   "Painterly figure study. Scale is built entirely through relation - a small body cradled in "
-  "oversized hands beneath a severed face.",
-  ["illustration", "painting", "surreal"], None),
+  "oversized hands beneath a severed face. The crop of this piece is what I use as my avatar.",
+  ["Sotto", "painting", "surreal"], None),
 
  ("illus-rabbit-room", os.path.join(DL, "Art concept 2.jpeg"),
   "illustration", "Rabbit Room",
-  "Horror composition in a restricted red and black key. The duplicated figure and encroaching "
-  "hands build the threat without an explicit subject.",
-  ["illustration", "painting", "horror"], None),
+  "Fan art of a character by the artist skineor. Horror composition in a restricted red and "
+  "black key - the duplicated figure and encroaching hands build the threat without ever "
+  "showing what is doing it.",
+  ["fan art", "painting", "horror"], None),
 
  ("illus-reliquary", os.path.join(DL, "Art concept 3.jpeg"),
   "illustration", "Reliquary",
-  "Flat primary blocking against painted stained glass. Pushes how far a palette can be reduced "
-  "before form stops reading.",
-  ["illustration", "painting", "graphic"], None),
+  "Fan art for the band Ghost. Flat primary blocking against painted stained glass, pushing "
+  "how far a palette can be reduced before form stops reading.",
+  ["fan art", "painting", "graphic"], None),
 
  ("illus-vday", os.path.join(DL, "Art concept 4.jpeg"),
-  "illustration", "Offering",
+  "illustration", "Sotto - Offering",
   "Seasonal illustration mixing a rendered portrait with an inset chibi - a deliberate test of "
   "two rendering registers inside one frame.",
-  ["illustration", "painting", "character"], None),
+  ["Sotto", "painting", "character"], None),
 
  ("illus-ribcage", os.path.join(DL, "Art concept 5.jpeg"),
-  "illustration", "Pixel Heart",
+  "illustration", "Sotto - Pixel Heart",
   "Anatomical framing with an intentionally low-resolution heart. The resolution clash is the "
   "subject rather than an artefact.",
-  ["illustration", "painting", "graphic"], None),
+  ["Sotto", "painting", "graphic"], None),
 
  ("illus-hanfu", os.path.join(DL, "Art Concept 6.jpeg"),
   "illustration", "Still Season",
@@ -179,16 +180,16 @@ ITEMS = [
   ["illustration", "painting", "portrait"], None),
 
  ("illus-oni-portrait", os.path.join(DL, "Character art 1.jpeg"),
-  "illustration", "Grin",
+  "illustration", "Sotto - Grin",
   "Sticker-style character bust. A hard white keyline and torn red field make the piece work as "
   "a standalone cut-out asset.",
-  ["character design", "illustration"], None),
+  ["Sotto", "character design"], None),
 
  ("illus-oc-sheet", os.path.join(DL, "Character art 2.jpeg"),
-  "illustration", "Original Character - Reference Sheet",
-  "Working reference sheet: a rendered bust paired with a chibi full-body and margin notes, "
-  "formatted the way a sheet gets handed to a collaborator.",
-  ["character design", "reference sheet"], None),
+  "illustration", "Sotto - Reference Sheet",
+  "Working reference sheet for Sotto: a rendered bust paired with a chibi full-body and margin "
+  "notes, formatted the way a sheet gets handed to a collaborator.",
+  ["Sotto", "reference sheet"], None),
 
  # ---------------- COMMISSIONED ----------------
  ("merch-keychains-pair", os.path.join(DL, "Chibi art for a school event (Merch).jpeg"),

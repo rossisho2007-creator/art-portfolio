@@ -122,6 +122,16 @@ must match the group `data-group` attributes in `index.html`.
 
 ---
 
+## Credits
+
+Most work here is original. Two pieces in the Illustration section are fan art and are
+credited on the site and in their captions: *Reliquary* (the band Ghost) and *Rabbit Room*
+(a character by the artist skineor). The Fan Art section is fan work of **My Singing
+Monsters**, property of Big Blue Bubble.
+
+**Sotto** is my original character, and appears across most of the Illustration section.
+**Ang-ri** and **Yuli** are the Fish Game cast and are separate characters.
+
 ## Copyright
 
 All artwork in this repository is © Rossi Sho and is **not** licensed for reuse,

@@ -289,10 +289,10 @@
     {
       "slug": "illus-crowned",
       "section": "illustration",
-      "title": "Crowned",
-      "caption": "Painterly figure study. Scale is built entirely through relation - a small body cradled in oversized hands beneath a severed face.",
+      "title": "Sotto - Crowned",
+      "caption": "Painterly figure study. Scale is built entirely through relation - a small body cradled in oversized hands beneath a severed face. The crop of this piece is what I use as my avatar.",
       "tags": [
-        "illustration",
+        "Sotto",
         "painting",
         "surreal"
       ],
@@ -305,9 +305,9 @@
       "slug": "illus-rabbit-room",
       "section": "illustration",
       "title": "Rabbit Room",
-      "caption": "Horror composition in a restricted red and black key. The duplicated figure and encroaching hands build the threat without an explicit subject.",
+      "caption": "Fan art of a character by the artist skineor. Horror composition in a restricted red and black key - the duplicated figure and encroaching hands build the threat without ever showing what is doing it.",
       "tags": [
-        "illustration",
+        "fan art",
         "painting",
         "horror"
       ],
@@ -320,9 +320,9 @@
       "slug": "illus-reliquary",
       "section": "illustration",
       "title": "Reliquary",
-      "caption": "Flat primary blocking against painted stained glass. Pushes how far a palette can be reduced before form stops reading.",
+      "caption": "Fan art for the band Ghost. Flat primary blocking against painted stained glass, pushing how far a palette can be reduced before form stops reading.",
       "tags": [
-        "illustration",
+        "fan art",
         "painting",
         "graphic"
       ],
@@ -334,10 +334,10 @@
     {
       "slug": "illus-vday",
       "section": "illustration",
-      "title": "Offering",
+      "title": "Sotto - Offering",
       "caption": "Seasonal illustration mixing a rendered portrait with an inset chibi - a deliberate test of two rendering registers inside one frame.",
       "tags": [
-        "illustration",
+        "Sotto",
         "painting",
         "character"
       ],
@@ -349,10 +349,10 @@
     {
       "slug": "illus-ribcage",
       "section": "illustration",
-      "title": "Pixel Heart",
+      "title": "Sotto - Pixel Heart",
       "caption": "Anatomical framing with an intentionally low-resolution heart. The resolution clash is the subject rather than an artefact.",
       "tags": [
-        "illustration",
+        "Sotto",
         "painting",
         "graphic"
       ],
@@ -379,11 +379,11 @@
     {
       "slug": "illus-oni-portrait",
       "section": "illustration",
-      "title": "Grin",
+      "title": "Sotto - Grin",
       "caption": "Sticker-style character bust. A hard white keyline and torn red field make the piece work as a standalone cut-out asset.",
       "tags": [
-        "character design",
-        "illustration"
+        "Sotto",
+        "character design"
       ],
       "w": 1280,
       "h": 1600,
@@ -393,10 +393,10 @@
     {
       "slug": "illus-oc-sheet",
       "section": "illustration",
-      "title": "Original Character - Reference Sheet",
-      "caption": "Working reference sheet: a rendered bust paired with a chibi full-body and margin notes, formatted the way a sheet gets handed to a collaborator.",
+      "title": "Sotto - Reference Sheet",
+      "caption": "Working reference sheet for Sotto: a rendered bust paired with a chibi full-body and margin notes, formatted the way a sheet gets handed to a collaborator.",
       "tags": [
-        "character design",
+        "Sotto",
         "reference sheet"
       ],
       "w": 1600,
