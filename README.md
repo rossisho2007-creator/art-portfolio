@@ -125,7 +125,9 @@ must match the group `data-group` attributes in `index.html`.
 .
 ├── index.html              page content and section copy
 ├── assets/
+│   ├── css/fonts.css       generated @font-face rules
 │   ├── css/style.css       all styling
+│   ├── fonts/              self-hosted static font instances
 │   └── js/
 │       ├── works.js        generated manifest the page loads
 │       ├── works.json      generated manifest (source of truth)
@@ -135,7 +137,15 @@ must match the group `data-group` attributes in `index.html`.
 │   └── thumb/              800px, grid
 └── tools/
     ├── build_assets.py     processes source art → images/ + works.json
-    └── make_manifest.py    works.json → works.js
+    ├── make_manifest.py    works.json → works.js, + ?v= cache stamps
+    ├── fetch_fonts.py      downloads static fonts → assets/fonts + fonts.css
+    └── build_pdf.py        renders index.html → Rossi-Sho-Portfolio.pdf
+
+**Fonts are self-hosted deliberately.** A multi-weight Google Fonts request returns a
+*variable* font, and headless Chrome cannot embed those in a PDF — it falls back to Type3
+glyph procedures, one per text size, which many PDF viewers render with characters
+missing. Static instances embed cleanly as Type0. Don't swap `fonts.css` back for a
+Google Fonts `<link>` without re-checking the PDF.
 ```
 
 ---

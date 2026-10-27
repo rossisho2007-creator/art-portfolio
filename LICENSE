@@ -10,3 +10,11 @@ SITE CODE
 The HTML, CSS, JavaScript and Python in this repository are released under the
 MIT License. You are free to reuse the portfolio template for your own work,
 provided you replace the artwork and personal details with your own.
+
+BUNDLED FONTS
+assets/fonts/ contains static instances of Fraunces and Inter, both licensed
+under the SIL Open Font License 1.1, which permits bundling and redistribution.
+Fraunces: https://github.com/googlefonts/fraunces
+Inter:    https://github.com/rsms/inter
+They are fetched by tools/fetch_fonts.py and are not covered by the MIT grant
+above, which applies to this repository's own code.

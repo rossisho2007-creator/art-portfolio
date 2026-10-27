@@ -19,6 +19,7 @@ HTML = os.path.join(ROOT, "index.html")
 
 # Files whose references in index.html get a ?v= stamp.
 VERSIONED = [
+    "assets/css/fonts.css",
     "assets/css/style.css",
     "assets/js/works.js",
     "assets/js/main.js",
