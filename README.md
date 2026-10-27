@@ -37,8 +37,9 @@ unreleased.
 - Lightbox viewer with keyboard (`←` `→` `Esc`), swipe and focus trapping
 - Lazy-loaded thumbnails with full-resolution images on open
 - Responsive down to small phones
-- **Generate PDF** button: prints the whole portfolio to a paginated A4 document
-  via the browser's own print-to-PDF, with a dedicated light print theme
+- **Download PDF**: serves a pre-built 13-page A4 document (`tools/build_pdf.py`), so
+  every visitor gets the same file in one click. A dedicated light print stylesheet also
+  makes plain Ctrl+P produce the same layout.
 - No build step, no dependencies, no tracking
 
 ---
@@ -96,7 +97,17 @@ Artwork is driven by a single generated manifest, so you never hand-edit the gal
    so without a new hash a visitor keeps their old copy and your change never reaches
    them — which looks exactly like a broken feature.
 
-4. Commit and push — GitHub Pages redeploys automatically.
+4. Rebuild the downloadable PDF so it matches the site:
+
+   ```bash
+   python tools/build_pdf.py
+   ```
+
+   This renders `index.html` to `Rossi-Sho-Portfolio.pdf` with headless Chrome. The
+   Download button serves this file directly, so it must be rebuilt whenever artwork
+   or page copy changes or the PDF will be out of date with the site.
+
+5. Commit and push — GitHub Pages redeploys automatically.
 
 To **reorder** pieces, move them within `ITEMS`. To **remove** one, delete its entry and
 the matching files in `images/full/` and `images/thumb/`.

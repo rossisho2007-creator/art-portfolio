@@ -573,7 +573,7 @@ body.lb-open{ overflow:hidden; }
 .print-only{ display:none; }
 .print-slide{ display:none; }
 .contact__pdf{ display:flex; justify-content:center; margin:0 0 1.2rem; }
-#pdf-btn:disabled{ opacity:.6; cursor:progress; }
+#pdf-btn{ text-decoration:none; }
 
 /* ============================================================
    PRINT / SAVE-AS-PDF

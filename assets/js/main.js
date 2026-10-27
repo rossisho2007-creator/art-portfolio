@@ -314,16 +314,11 @@
     }
   });
 
-  /* ---------------- PDF via print ----------------
-     The browser's own print-to-PDF gives vector text and real page breaks,
-     so no PDF library is needed. Three things have to be fixed up first, or
-     the export silently comes out wrong:
-       1. a filter may be active, hiding whole sections
-       2. album slides are not in the DOM — only the album cover tile is
-       3. images are lazy, so off-screen ones may never have loaded          */
-
-  var pdfBtn   = document.getElementById("pdf-btn");
-  var pdfLabel = document.getElementById("pdf-btn-label");
+  /* ---------------- Print support ----------------
+     The Download button serves a pre-built PDF (tools/build_pdf.py), so no
+     JS is needed for it. This block only keeps Ctrl+P honest: album slides
+     live outside the DOM until asked for, and scroll-reveal would otherwise
+     print untouched sections as blank pages.                                */
 
   function addAlbumSlidesForPrint() {
     Object.keys(ALBUMS).forEach(function (id) {
@@ -347,22 +342,9 @@
     });
   }
 
-  function loadAllImages() {
-    var imgs = Array.prototype.slice.call(document.images);
-    imgs.forEach(function (im) { im.loading = "eager"; });
-    return Promise.all(imgs.map(function (im) {
-      if (im.complete && im.naturalWidth) return Promise.resolve();
-      return new Promise(function (res) {
-        im.addEventListener("load", res, { once: true });
-        im.addEventListener("error", res, { once: true });
-        setTimeout(res, 8000);          // never hang the button on one bad image
-      });
-    }));
-  }
-
   // The album slides must exist in the DOM for any print route, including a
-  // plain Ctrl+P that never touches the button. Built once the page has
-  // settled so the extra thumbnails never compete with first render.
+  // plain Ctrl+P. Built once the page has settled so the extra thumbnails
+  // never compete with first render.
   function whenIdle(fn) {
     if ("requestIdleCallback" in window) requestIdleCallback(fn, { timeout: 3000 });
     else setTimeout(fn, 1200);
@@ -370,43 +352,12 @@
   if (document.readyState === "complete") whenIdle(addAlbumSlidesForPrint);
   else window.addEventListener("load", function () { whenIdle(addAlbumSlidesForPrint); });
 
-  // Covers Ctrl+P / File > Print as well as the button.
+  // Ctrl+P / File > Print still produces the same document as the PDF.
   window.addEventListener("beforeprint", function () {
     addAlbumSlidesForPrint();
     document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("is-in"); });
     Array.prototype.forEach.call(document.images, function (im) { im.loading = "eager"; });
   });
-
-  if (pdfBtn) {
-    pdfBtn.addEventListener("click", function () {
-      pdfBtn.disabled = true;
-      pdfLabel.textContent = "Preparing…";
-
-      // Show every section regardless of the active filter.
-      var activeChip = document.querySelector(".chip.is-active");
-      var allChip    = document.querySelector('.chip[data-filter="all"]');
-      if (allChip && activeChip !== allChip) allChip.click();
-
-      // Expand disclosures so the premise is included.
-      var reopened = [];
-      document.querySelectorAll("details:not([open])").forEach(function (d) {
-        d.open = true;
-        reopened.push(d);
-      });
-
-      // Reveal animations leave tiles at opacity 0 until scrolled past.
-      document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("is-in"); });
-
-      addAlbumSlidesForPrint();
-
-      loadAllImages().then(function () {
-        pdfLabel.textContent = "Generate PDF";
-        pdfBtn.disabled = false;
-        window.print();
-        reopened.forEach(function (d) { d.open = false; });
-      });
-    });
-  }
 
   /* ---------------- misc ---------------- */
 
