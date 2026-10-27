@@ -336,7 +336,7 @@
         fig.setAttribute("data-print-album", id);
         fig.innerHTML =
           '<div class="tile__media">' +
-            '<img src="' + s.thumb + '" alt="' + esc(s.title) + '">' +
+            '<img src="' + s.thumb + '" alt="' + esc(s.title) + '" decoding="async">' +
           "</div>" +
           '<div class="tile__body">' +
             '<h5 class="tile__title">' + esc(ALBUMS[id].title.split(" - ")[0]) +
@@ -359,6 +359,23 @@
       });
     }));
   }
+
+  // The album slides must exist in the DOM for any print route, including a
+  // plain Ctrl+P that never touches the button. Built once the page has
+  // settled so the extra thumbnails never compete with first render.
+  function whenIdle(fn) {
+    if ("requestIdleCallback" in window) requestIdleCallback(fn, { timeout: 3000 });
+    else setTimeout(fn, 1200);
+  }
+  if (document.readyState === "complete") whenIdle(addAlbumSlidesForPrint);
+  else window.addEventListener("load", function () { whenIdle(addAlbumSlidesForPrint); });
+
+  // Covers Ctrl+P / File > Print as well as the button.
+  window.addEventListener("beforeprint", function () {
+    addAlbumSlidesForPrint();
+    document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("is-in"); });
+    Array.prototype.forEach.call(document.images, function (im) { im.loading = "eager"; });
+  });
 
   if (pdfBtn) {
     pdfBtn.addEventListener("click", function () {

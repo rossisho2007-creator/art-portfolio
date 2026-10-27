@@ -601,6 +601,16 @@ body.lb-open{ overflow:hidden; }
   .print-only{ display:block; }
   .print-slide{ display:block; }
 
+  /* Scroll-reveal leaves untouched tiles at opacity 0. Printing does not
+     scroll, so without this every section the reader never visited comes
+     out as a blank page. */
+  .reveal{ opacity:1 !important; transform:none !important; }
+
+  /* Print every disclosure expanded, including via plain Ctrl+P where no
+     script has run to open them. */
+  details > *:not(summary){ display:block !important; }
+  .disclose summary{ pointer-events:none; }
+
   /* Interface chrome has no place in a document. */
   .site-header, .filters, .lightbox, .skip-link,
   .contact__pdf, .contact__note, .contact__actions,
@@ -626,21 +636,33 @@ body.lb-open{ overflow:hidden; }
   .group{ break-before:page; }
   .group:first-of-type{ break-before:auto; }
 
+  /* Section opener. On screen this is a cropped banner with the title laid
+     over it; in a document that would crop the artwork and bury the text on
+     top of it. Printed, the image un-crops to its true aspect and the title
+     block drops underneath it as ordinary copy.                             */
   .cover{
-    height:62mm; break-inside:avoid; break-after:avoid;
-    border:1px solid var(--line); border-radius:3px; margin-bottom:6mm;
+    display:flex; align-items:center; gap:8mm;
+    height:auto; width:100%;
+    break-inside:avoid; break-after:avoid;
+    border:0; border-radius:0; background:none; margin:0 0 8mm;
   }
-  .cover img{ transform:none !important; }
-  .cover--zoom img{ transform:scale(1.25) !important; }
-  .cover::after{
-    background:linear-gradient(to top, rgba(0,0,0,.88) 0%, rgba(0,0,0,.55) 34%, rgba(0,0,0,0) 72%);
+  .cover img{
+    position:static; inset:auto; flex:none;
+    width:auto; max-width:92mm; height:auto; max-height:118mm;
+    margin:0;
+    object-fit:contain !important; object-position:center !important;
+    transform:none !important;
+    border:1px solid var(--line); border-radius:2px;
   }
-  .cover__overlay{ padding:0 6mm 5mm; max-width:none; }
-  .cover__title{ font-size:20pt; color:#fff !important; margin-bottom:2mm; }
-  .cover__eyebrow{ color:#e3c48c !important; font-size:7pt; margin-bottom:2mm; }
-  .cover__blurb{ color:#eee !important; font-size:9pt; max-width:52ch; }
-  .cover__blurb strong{ color:#fff !important; }
-  .badge{ color:#eee !important; border-color:rgba(255,255,255,.45) !important; }
+  .cover--zoom img{ transform:none !important; }
+  .cover::after{ display:none; }                 /* no scrim over a light page */
+
+  .cover__overlay{ position:static; padding:0; max-width:none; flex:1; min-width:0; }
+  .cover__title{ font-size:21pt; color:var(--text) !important; margin:0 0 2.5mm; text-shadow:none; }
+  .cover__eyebrow{ color:var(--accent) !important; font-size:7.5pt; margin-bottom:2.5mm; }
+  .cover__blurb{ color:var(--muted) !important; font-size:9.5pt; max-width:62ch; text-shadow:none; }
+  .cover__blurb strong{ color:var(--text) !important; }
+  .badge{ color:var(--muted) !important; border-color:var(--line) !important; background:none !important; }
 
   .lore__lead{ font-size:12pt; margin-bottom:4mm; break-after:avoid; }
   .subhead{ break-after:avoid; margin-top:7mm; }
@@ -651,17 +673,48 @@ body.lb-open{ overflow:hidden; }
   .disclose summary{ font-size:8pt; border-bottom:1px solid var(--line); }
   .disclose__body p{ font-size:9pt; }
 
-  /* ── Artwork grid ── */
-  .grid{ grid-template-columns:repeat(3,1fr) !important; gap:4mm !important; }
+  /* ── Artwork plates ──
+     Two columns, not three: at A4 each plate gets ~85mm instead of ~55mm.
+     Every image drops its 4:5 crop box and prints at its true aspect, so
+     nothing is cut off. align-items:start stops a tall portrait piece from
+     stretching the landscape one beside it.                                 */
+  .grid{
+    grid-template-columns:repeat(2,1fr) !important;
+    gap:7mm 6mm !important;
+    align-items:start !important;
+  }
   .tile{
     break-inside:avoid; transform:none !important;
-    border:1px solid var(--line); background:#fff;
+    border:1px solid var(--line); background:#fff; border-radius:2px;
+    /* Print slides are <figure>, which the UA stylesheet gives
+       margin:1em 40px. Left unreset that pushes every tile ~10mm into its
+       grid track and shunts the last column off the page. */
+    margin:0 !important; min-width:0;
   }
-  .tile__media{ aspect-ratio:4/5; }
-  .tile__media img{ filter:none !important; transform:none !important; }
+  .tile__media{
+    aspect-ratio:auto !important;
+    height:auto !important; background:none;
+  }
+  .tile__media img{
+    position:static; width:100%; height:auto !important;
+    object-fit:contain !important; object-position:center !important;
+    filter:none !important; transform:none !important;
+  }
   .tile__title{ font-size:8.5pt; }
   .tile__tags{ display:none; }
   .tile__body{ padding:2.5mm 3mm 3mm; }
+
+  /* Sprite sets are small and near-identical — four across reads as a set.
+     minmax(0,1fr) rather than 1fr: a plain 1fr track floors at the item's
+     min-content width, which pushes the fourth column past the page edge. */
+  .grid--albums{
+    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+    gap:5mm 4mm !important;
+    justify-content:start !important;
+    width:100% !important; max-width:100% !important;
+    margin:0 !important; padding:0 !important;
+  }
+  .grid--albums .tile__title{ font-size:7.5pt; }
 
   /* ── About ── */
   .section--about{ break-before:page; border-top:0; }
