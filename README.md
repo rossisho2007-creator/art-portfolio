@@ -85,11 +85,16 @@ Artwork is driven by a single generated manifest, so you never hand-edit the gal
    This writes an optimised full-size JPEG to `images/full/`, an 800px thumbnail to
    `images/thumb/`, and regenerates `assets/js/works.json`.
 
-3. Regenerate the JS manifest the page actually loads:
+3. Regenerate the JS manifest the page actually loads, and re-stamp the asset URLs:
 
    ```bash
    python tools/make_manifest.py
    ```
+
+   **Do not skip this step after editing CSS or JS.** It rewrites the `?v=` hash on the
+   `style.css` / `main.js` / `works.js` references in `index.html`. Browsers cache by URL,
+   so without a new hash a visitor keeps their old copy and your change never reaches
+   them — which looks exactly like a broken feature.
 
 4. Commit and push — GitHub Pages redeploys automatically.
 
