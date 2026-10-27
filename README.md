@@ -37,6 +37,8 @@ unreleased.
 - Lightbox viewer with keyboard (`←` `→` `Esc`), swipe and focus trapping
 - Lazy-loaded thumbnails with full-resolution images on open
 - Responsive down to small phones
+- **Generate PDF** button: prints the whole portfolio to a paginated A4 document
+  via the browser's own print-to-PDF, with a dedicated light print theme
 - No build step, no dependencies, no tracking
 
 ---

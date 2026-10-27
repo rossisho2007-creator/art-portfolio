@@ -314,6 +314,83 @@
     }
   });
 
+  /* ---------------- PDF via print ----------------
+     The browser's own print-to-PDF gives vector text and real page breaks,
+     so no PDF library is needed. Three things have to be fixed up first, or
+     the export silently comes out wrong:
+       1. a filter may be active, hiding whole sections
+       2. album slides are not in the DOM — only the album cover tile is
+       3. images are lazy, so off-screen ones may never have loaded          */
+
+  var pdfBtn   = document.getElementById("pdf-btn");
+  var pdfLabel = document.getElementById("pdf-btn-label");
+
+  function addAlbumSlidesForPrint() {
+    Object.keys(ALBUMS).forEach(function (id) {
+      var grid = document.querySelector('[data-albums="' + ALBUMS[id].section + '"]');
+      if (!grid || grid.querySelector('[data-print-album="' + id + '"]')) return;
+
+      (albumSlides[id] || []).forEach(function (s) {
+        var fig = document.createElement("figure");
+        fig.className = "tile print-slide";
+        fig.setAttribute("data-print-album", id);
+        fig.innerHTML =
+          '<div class="tile__media">' +
+            '<img src="' + s.thumb + '" alt="' + esc(s.title) + '">' +
+          "</div>" +
+          '<div class="tile__body">' +
+            '<h5 class="tile__title">' + esc(ALBUMS[id].title.split(" - ")[0]) +
+              " — " + esc(s.title) + "</h5>" +
+          "</div>";
+        grid.appendChild(fig);
+      });
+    });
+  }
+
+  function loadAllImages() {
+    var imgs = Array.prototype.slice.call(document.images);
+    imgs.forEach(function (im) { im.loading = "eager"; });
+    return Promise.all(imgs.map(function (im) {
+      if (im.complete && im.naturalWidth) return Promise.resolve();
+      return new Promise(function (res) {
+        im.addEventListener("load", res, { once: true });
+        im.addEventListener("error", res, { once: true });
+        setTimeout(res, 8000);          // never hang the button on one bad image
+      });
+    }));
+  }
+
+  if (pdfBtn) {
+    pdfBtn.addEventListener("click", function () {
+      pdfBtn.disabled = true;
+      pdfLabel.textContent = "Preparing…";
+
+      // Show every section regardless of the active filter.
+      var activeChip = document.querySelector(".chip.is-active");
+      var allChip    = document.querySelector('.chip[data-filter="all"]');
+      if (allChip && activeChip !== allChip) allChip.click();
+
+      // Expand disclosures so the premise is included.
+      var reopened = [];
+      document.querySelectorAll("details:not([open])").forEach(function (d) {
+        d.open = true;
+        reopened.push(d);
+      });
+
+      // Reveal animations leave tiles at opacity 0 until scrolled past.
+      document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("is-in"); });
+
+      addAlbumSlidesForPrint();
+
+      loadAllImages().then(function () {
+        pdfLabel.textContent = "Generate PDF";
+        pdfBtn.disabled = false;
+        window.print();
+        reopened.forEach(function (d) { d.open = false; });
+      });
+    });
+  }
+
   /* ---------------- misc ---------------- */
 
   document.getElementById("year").textContent = new Date().getFullYear();
